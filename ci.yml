@@ -3,10 +3,10 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -26,4 +26,7 @@ jobs:
 
     - name: Run tests (if you had any)
       run: npm test
+
+    - name: run a simple step
+      run: echo  "hello, world!"
 
